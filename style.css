@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900, 100&display=swap');
 *
 {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Poppins', sans-serif;
-}
-:root
-{
-    --ulr:#0ab3ff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Poppins',sans-serif; 
 }
 body
 {
@@ -16,102 +12,130 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1c2630;
+    background: #edf1f4;
 }
-form
-{
-    background: #29313c;
-    padding: 60px 80px 60px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-}
-form h2
-{
-    color: #fff;
-    font-weight: 500;
-    text-transform:uppercase ;
-    font-size: 1.25em;
-    letter-spacing: 0.1em;
-    margin-bottom:50px ;
-}
-.inputBox
+.login
 {
     position: relative;
-    width: 300px;
-    margin-bottom:40px ;
+    width: 380px;
+    padding: 80px 50px 50px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+    -15px -15px 20px #fffb;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
-.inputBox input
+.login form
 {
     position: relative;
     width: 100%;
-    padding: 10px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #999;
-    outline: none;
-    color: #fff;
-    font-size: 1em;
-  
-    letter-spacing: 0.15em;
 }
-.inputBox label
+.login form h2
 {
-    position: absolute;
-    left: 0;
-    padding: 10px 0;
-    pointer-events: none;
-    color: #999;
-    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 30px;
+    line-height: 0.9em;
 }
-.inputBox label span
+.login form h2 span
+{
+    font-weight:300 ;
+    font-size: 0.65em;
+}
+.login form .inputBox 
 {
     position: relative;
-    display: inline-flex;
-    letter-spacing: 0.05em;
-    transition: 0.2s ease-in-out;
+    display: flex;
 }
-
-
-.inputBox input:focus ~ label span,
-.inputBox input:valid ~ label span
+.login form .inputBox input
 {
-    color: var(--ulr);
-    letter-spacing: 0.15em;
-    transform: translateY(-25px);
-}
-.inputBox input:focus,
-.inputBox input:valid
-{
-    border-bottom: 2px solid var(--ulr);
-}
-.inputBox input[type="submit"]
-{
-    background: var(--ulr);
     border: none;
-    padding: 15px; 
-    border-radius: 50px;
-    color: #1c2630;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.login form .inputBox input[type="text"],
+.login form .inputBox input[type="password"]
+{
+    width: 100%;
+    padding: 15px 20px;
+    padding-left: 40px;
+    margin-top: 20px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px #fff ;
+}
+.login form .inputBox i
+{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+}
+.login form label
+{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.login form input[type="checkbox"]
+{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.login form .inputBox input[type="submit"]
+{
+    width: 100%;
+    margin-top: 20px;
     font-weight: 600;
-    font-size: 1.15em;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     cursor: pointer;
-    transition: 0.5s;
+    padding: 15px 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px #fff;
 }
-.inputBox input[type="submit"]:hover
+.login form .inputBox input[type="submit"]:focus
 {
-    letter-spacing: 0.35em;
+    letter-spacing: 0.05em;
+    box-shadow:inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+   inset -5px -5px 10px #fff;
 }
-form p
+.login .fingerprint
 {
-    color: #fff;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 15px;
 }
-form p a{
-    color: var(--ulr);
+.login .fingerprint .fingerprintBox
+{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px #fff;
+    border: 3px solid #edf1f4;
+    padding: 10px 5px 5px;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #03a9f4,#f10ab3);
+}
+.login .fingerprint .fingerprintBox img
+{
+    max-width: 55px;
+    max-height: 40px;
+    filter: invert(1);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+}
+.login .fingerprint p{
     font-weight: 500;
-    text-decoration: none;
 }
-
